@@ -1,9 +1,12 @@
-import HeroSection from "@/components/ui/landing-page/hero-section";
+import FeaturedProduct from "@/components/landing-page/featured-products";
+import HeroSection from "@/components/landing-page/hero-section";
+
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
+      <FeaturedProduct />
     </div>
   );
 }
