@@ -1,6 +1,43 @@
 import SectionHeader from "@/components/common/section-header";
 import Link from "next/link";
 import { ArrowUpRightIcon, StarIcon } from "lucide-react";
+import ProductCard from "../common/ProductCard";
+
+
+const featuredProducts =[
+    {
+        id:1,
+        name:"Partykit",
+        description:"A toolkit for creating parity products",
+        tags:["SaaS","Pricing","Global"],
+        votes:615,
+        isFeatured:true
+    },
+    {
+        id:2,
+        name:"Developer to leader",
+        description:"Learn to build production ready full course",
+        tags:["SaaS","Pricing","Global"],
+        votes:615,
+        isFeatured:true
+    },
+    {
+        id:3,
+        name:"Partykit",
+        description:"A toolkit for creating parity products",
+        tags:["SaaS","Pricing","Global"],
+        votes:615,
+        isFeatured:true
+    },
+    {
+        id:4,
+        name:"Partykit",
+        description:"A toolkit for creating parity products",
+        tags:["SaaS","Pricing","Global"],
+        votes:615,
+        isFeatured:true
+    }
+]
 
 export default function FeaturedProduct() {
     return (
@@ -19,6 +56,13 @@ export default function FeaturedProduct() {
                         View All
                         <ArrowUpRightIcon className="size-4" />
                     </Link>
+                </div>
+                <div className="grid-wrapper ">
+                    {
+                    featuredProducts.map((product)=>
+                        <ProductCard key={product.id} product={product} />
+                    )
+                    }
                 </div>
             </div>
         </section>
